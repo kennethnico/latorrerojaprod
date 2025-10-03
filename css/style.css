@@ -2317,7 +2317,7 @@ services
   width: 250px;
   display: inline-block;
   overflow: hidden;
-  border-radius: 70px;
+  /*border-radius: 70px;*/
   margin-right: 30px;
 }
 .mil-text-image img {
