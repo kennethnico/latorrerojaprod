@@ -1726,15 +1726,21 @@ banner
     text-align: center;
   }
 }
+@media screen and (min-width: 993px) {
+  .my-container{
+    overflow: visible!important;
+  }
+  .my-banner-personal{
+    overflow: auto!important;
+  }
+}
 .mil-banner-panel{
-   display: -webkit-box;
-  display: -ms-flexbox;
-  display: inline-block!important;
-  padding: 50px 60px 50px 90px!important;
+  -webkit-box-orient: vertical!important;
+  -webkit-box-direction: normal!important;
+  -ms-flex-direction: column!important;
+  flex-direction: column!important;
   height: auto!important;
-  top: calc(100vh - 150px)!important;
-  left: 0;
-  width: 100%;
+  padding: 50px 30px!important;
 }
 .mil-banner-personal .mil-banner-content .mil-banner-panel {
   display: -webkit-box;
@@ -1748,7 +1754,7 @@ banner
           justify-content: space-between;
   padding: 0 60px 0 90px;
   background-color: rgb(255, 255, 255);
-  height: 100px;
+  height: 180px;
   position: absolute;
   top: calc(100vh - 180px);
   left: 0;
