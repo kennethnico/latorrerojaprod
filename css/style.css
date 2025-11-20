@@ -44,7 +44,7 @@ main
 
 ------------------------------------------- */
 :root{
-  --primary-color:  #bb0034;
+  --primary-color:  rgb(187, 0, 52);
   /*--primary-color:  rgb(255, 152, 0);*/
   --gray-color: #767676;
   --rojo: #c94558;
