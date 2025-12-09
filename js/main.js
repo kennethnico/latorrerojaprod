@@ -515,8 +515,8 @@ $(function () {
 
     ***************************/
     var swiper = new Swiper('.mil-infinite-show', {
-        slidesPerView: 2,
-        spaceBetween: 30,
+        slidesPerView: 6,
+        spaceBetween: 0,
         speed: 5000,
         autoplay: true,
         autoplay: {
@@ -956,8 +956,8 @@ $(function () {
 
         ***************************/
         var swiper = new Swiper('.mil-infinite-show', {
-            slidesPerView: 2,
-            spaceBetween: 30,
+            slidesPerView: 6,
+            spaceBetween: 5,
             speed: 5000,
             autoplay: true,
             autoplay: {
@@ -967,7 +967,7 @@ $(function () {
             freeMode: true,
             breakpoints: {
                 992: {
-                    slidesPerView: 4,
+                    slidesPerView: 8,
                 },
             },
         });

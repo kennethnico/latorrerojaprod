@@ -664,6 +664,9 @@ button
   .mil-button svg {
     margin-left: 25px;
   }
+  .mil-link{
+    padding-left: 40px;
+  }
 }
 
 /* -------------------------------------------
