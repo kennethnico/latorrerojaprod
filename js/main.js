@@ -956,8 +956,8 @@ $(function () {
 
         ***************************/
         var swiper = new Swiper('.mil-infinite-show', {
-            slidesPerView: 6,
-            spaceBetween: 5,
+            slidesPerView: 8,
+            spaceBetween: 0,
             speed: 5000,
             autoplay: true,
             autoplay: {
