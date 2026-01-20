@@ -1745,6 +1745,13 @@ banner
   height: auto!important;
   padding: 50px 30px!important;
 }
+@media screen and (min-width: 995px) {
+  .mil-banner-mipanel{
+    -webkit-box-direction: normal!important;
+    -ms-flex-direction: row!important;
+    flex-direction: row!important;
+  }
+}
 .mil-banner-personal .mil-banner-content .mil-banner-panel {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1764,11 +1771,19 @@ banner
   width: 100%;
 }
 @media screen and (max-width: 992px) {
+  .mil-banner-panel{
+  -webkit-box-orient: vertical!important;
+  -webkit-box-direction: normal!important;
+  -ms-flex-direction: column!important;
+  flex-direction: column!important;
+  height: auto!important;
+  padding: 50px 30px!important;
+}
   .mil-banner-personal .mil-banner-content .mil-banner-panel {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
-            flex-direction: column;
+            flex-direction: column!important;
     height: auto;
     padding: 60px 30px;
   }
