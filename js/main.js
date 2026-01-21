@@ -967,7 +967,7 @@ $(function () {
             freeMode: true,
             breakpoints: {
                 992: {
-                    slidesPerView: 8,
+                    slidesPerView: 4,
                 },
             },
         });
