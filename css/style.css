@@ -2313,6 +2313,7 @@ partners
 
 .mil-partner-frame {
   display: block;
+  width: 100px;
 }
 .mil-partner-frame img {
   width: 200%;
@@ -2336,6 +2337,15 @@ partners
     .mil-partner-frame img {
       width: 90%;
       height: 70px!important;
+    }
+}
+@media screen and (max-width: 390px) {
+   .mil-partner-frame{
+     width: 70px!important;
+   }
+    .mil-partner-frame img {
+      width: 100%;
+      margin: 0 300px!important;
     }
 }
 

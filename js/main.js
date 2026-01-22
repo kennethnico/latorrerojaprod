@@ -528,6 +528,12 @@ $(function () {
             992: {
                 slidesPerView: 4,
             },
+            660:{
+                    slidesPerView: 3,
+                },
+                390:{
+                    slidesPerView: 2,
+                },
         },
     });
 
@@ -967,9 +973,12 @@ $(function () {
             freeMode: true,
             breakpoints: {
                 992: {
-                    slidesPerView: 4,
+                    slidesPerView: 5,
                 },
                 660:{
+                    slidesPerView: 3,
+                },
+                390:{
                     slidesPerView: 2,
                 },
             },
