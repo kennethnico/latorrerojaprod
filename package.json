@@ -1,0 +1,14 @@
+{
+  "name": "latorreroja",
+  "version": "1.0.0",
+  "description": "Unit tests for La Torre Roja website",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "devDependencies": {
+    "@jest/globals": "^29.7.0",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0"
+  }
+}
