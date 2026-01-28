@@ -530,11 +530,11 @@ $(function () {
                 slidesPerView: 4,
             },
             660:{
-                    slidesPerView: 4,
-                },
-                390:{
-                    slidesPerView: 2,
-                },
+                    slidesPerView: 5,
+            },
+            390:{
+                    slidesPerView: 3,
+            },
         },
     });
 
@@ -977,7 +977,7 @@ $(function () {
                     slidesPerView: 5,
                 },
                 660:{
-                    slidesPerView: 4,
+                    slidesPerView: 5,
                 },/*
                 390:{
                     slidesPerView: 2,

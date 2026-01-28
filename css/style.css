@@ -1086,6 +1086,13 @@ preloader
 .mil-preloader.mil-hidden {
   pointer-events: none;
 }
+@media screen and (max-width: 395px) {
+  .mil-preloader .mil-preloader-animation .mil-pos-abs .mil-reveal-frame p {
+    font-size: 16px;
+  }
+
+}
+
 
 /* -------------------------------------------
 
@@ -2316,11 +2323,17 @@ partners
   width: 100px;
 }
 .mil-partner-frame img {
-  width: 200%;
+  width: 250%;
   min-height: 150px!important;
 
 }
 
+@media screen and (max-width: 1020px) {
+    .mil-partner-frame img {
+      width: 230%;
+      min-height: 150px!important;
+    }
+}
 @media screen and (max-width: 860px) {
     .mil-partner-frame img {
       width: 150%;
@@ -2345,6 +2358,7 @@ partners
    }
     .mil-partner-frame img {
       width: 100%;
+      height: auto!important;
       margin: 0 300px!important;
     }
 }
