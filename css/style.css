@@ -665,7 +665,8 @@ button
     margin-left: 25px;
   }
   .mil-link{
-    padding-left: 40px;
+    /*padding-left: 40px;*/
+    margin-bottom: 40px;
   }
 }
 
@@ -2325,6 +2326,7 @@ partners
   display: block;
   width: 100px;
 }
+/*
 .mil-partner-frame img {
   width: 250%;
   min-height: 150px!important;
@@ -2365,7 +2367,56 @@ partners
       margin: 0 300px!important;
     }
 }
+*/
+.mil-partner{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  width:100%;
+}
 
+/* ===== Logos: 250px desktop, proporcional en mobile ===== */
+.mil-partner__slot{
+  height: 250px !important;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mil-partner__slot img{
+  height: 250px !important;
+  width: auto !important;
+  max-width: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* Mobile proporcional: 150px */
+@media (max-width: 660px){
+  .mil-partner__slot{ height: 150px !important; }
+  .mil-partner__slot img{ height: 150px !important; }
+}
+@media (max-width: 390px){
+  .mil-partner__slot{ height: 120px; max-width: 210px; }
+}
+
+/* Slide que ocupa “dos espacios” */
+.mil-infinite-show .swiper-slide.mil-slide--wide{
+  width: calc((100% / 5) * 2) !important; /* base desktop si tienes 4 por vista */
+}
+
+/* Si en breakpoints bajas a 2 por vista, el wide ocupa 2/2 = pantalla completa */
+@media (max-width: 992px){
+  .mil-infinite-show .swiper-slide.mil-slide--wide{
+    width: calc((100% / 4) * 2) !important;
+  }
+}
+@media (max-width: 660px){
+  .mil-infinite-show .swiper-slide.mil-slide--wide{
+    width: 100% !important;
+  }
+}
 
 /* -------------------------------------------
 

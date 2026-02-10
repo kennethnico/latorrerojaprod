@@ -514,31 +514,21 @@ $(function () {
     infinite slider
 
     ***************************/
-    var swiper = new Swiper('.mil-infinite-show', {
-        slidesPerView: 4,
-        spaceBetween: 0,
-        speed: 5000,
-        autoplay: true,
-        autoplay: {
-            delay: 0,
-        },
-        loop: true,
-        freeMode: true,
-        //No
-        breakpoints: {
-            1200: {
-                slidesPerView: 5,
-            },
-            992: {
-                slidesPerView: 4,
-            },
-            660:{
-                    slidesPerView: 4,
-            },
-            390:{
-                    slidesPerView: 3,
-            },
-        },
+    var swiper = new Swiper(".mil-infinite-show", {
+      slidesPerView: "auto",
+      spaceBetween: 40,
+      speed: 5000,
+      autoplay: true,
+      autoplay: { delay: 0 },
+      loop: true,
+      freeMode: true,
+      //No
+      breakpoints: {
+        1200: { slidesPerView: 5 },
+        992: { slidesPerView: 4 },
+        660: { slidesPerView: 4 },
+        390: { slidesPerView: 2 },
+      },
     });
 
     /***************************
@@ -965,34 +955,24 @@ $(function () {
         infinite slider
 
         ***************************/
-        var swiper = new Swiper('.mil-infinite-show', {
-            slidesPerView: 4,
-            spaceBetween: 10,
-            speed: 5000,
-            autoplay: true,
-            autoplay: {
-                delay: 0,
-            },
-            loop: true,
-            freeMode: true,
-            breakpoints: {
-                1920: {
-                    slidesPerView: 5,
-                },
-                992: {
-                    slidesPerView: 4,
-                },
-                660:{
-                    slidesPerView: 3,
-                },
-                390:{
-                    slidesPerView: 2,
-                },
-            },
+        var swiper = new Swiper(".mil-infinite-show", {
+          slidesPerView: "auto",
+          spaceBetween: 40,
+          speed: 5000,
+          autoplay: true,
+          autoplay: { delay: 0 },
+          loop: true,
+          freeMode: true,
+          breakpoints: {
+            1200: { slidesPerView: 5 },
+            992: { slidesPerView: 4 },
+            660: { slidesPerView: 4 },
+            390: { slidesPerView: 3 },
+          },
         });
 
         /***************************
-
+        
         portfolio slider
 
         ***************************/
