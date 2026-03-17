@@ -1,11 +1,18 @@
+<?php
+$status = $_GET['status'] ?? 'ok'; // valor por defecto
+$esExito = ($status === 'ok');
+?>
 <!DOCTYPE html>
 <html lang="zxx">
-
 <head>
-    <title>Contacto | La Torre Roja Producciones</title>
+    <title>
+         <?php echo $esExito ? 'Mensaje enviado | La Torre Roja Producciones'
+                             : 'Error al enviar | La Torre Roja Producciones'; ?>
+    </title>
     <!-- Facebook and Twitter integration -->
-     <meta charset="UTF-8">
-     <meta name="description" content="Ponte en contacto con La Torre Roja Producciones para branding, diseño web, diseño editorial y consultoría creativa. Cuéntanos tu proyecto y lo diseñamos contigo.">
+    <meta charset="UTF-8">
+    <meta name="description"
+        content="Ponte en contacto con La Torre Roja Producciones para branding, diseño web, diseño editorial y consultoría creativa. Cuéntanos tu proyecto y lo diseñamos contigo.">
     <meta property="og:title" content="La Torre Roja Producciones" />
     <meta property="og:image" content="img/bg_video.jpg" />
     <meta property="og:url" content="https://latorrerojaproducciones.com/" />
@@ -56,6 +63,7 @@
         <!-- cursor end -->
 
         <!-- preloader -->
+         <!--
         <div class="mil-preloader">
             <div class="mil-preloader-animation">
                 <div class="mil-pos-abs mil-animation-1">
@@ -71,6 +79,7 @@
                 </div>
             </div>
         </div>
+    -->
         <!-- preloader end -->
 
         <!-- scrollbar progress -->
@@ -133,42 +142,9 @@
                                 </div>
                                 <div class="mil-menu-right">
                                     <div class="row">
-                                        <!--
-                                        <div class="col-lg-8 mil-mb-60">
-                                            <h6 class="mil-muted mil-mb-30">Projects</h6>
-                                        </div>
-                                        <div class="col-lg-4 mil-mb-60">
-
-                                            <h6 class="mil-muted mil-mb-30">Useful links</h6>
-
-                                            <ul class="mil-menu-list">
-                                                <li><a href="#." class="mil-light-soft">Privacy Policy</a></li>
-                                                <li><a href="#." class="mil-light-soft">Terms and conditions</a></li>
-                                                <li><a href="#." class="mil-light-soft">Cookie Policy</a></li>
-                                                <li><a href="#." class="mil-light-soft">Careers</a></li>
-                                            </ul>
-
-                                        </div>
-                                        -->
                                     </div>
                                     <div class="mil-divider mil-mb-60"></div>
                                     <div class="row justify-content-between">
-                                        <!--
-                                        <div class="col-lg-4 mil-mb-60">
-
-                                            <h6 class="mil-muted mil-mb-30">Canada</h6>
-
-                                            <p class="mil-light-soft mil-up">71 South Los Carneros Road, California <span class="mil-no-wrap">+51 174 705 812</span></p>
-
-                                        </div>
-                                        <div class="col-lg-4 mil-mb-60">
-
-                                            <h6 class="mil-muted mil-mb-30">Germany</h6>
-
-                                            <p class="mil-light-soft">Leehove 40, 2678 MC De Lier, Netherlands <span class="mil-no-wrap">+31 174 705 811</span></p>
-
-                                        </div>
-                                        -->
                                     </div>
                                 </div>
                             </div>
@@ -211,106 +187,31 @@
                 <div class="mil-inner-banner mil-p-0-30">
                     <div class="mil-banner-content mil-center mil-up">
                         <div class="container">
-                            <ul class="mil-breadcrumbs mil-center mil-mb-60">
-                                <li><a href="./">Inicio</a></li>
-                                <li><a href="#">Contacto</a></li>
-                            </ul>
-                            <h1 class="mil-mb-60">¡Contáctanos!</h1>
-                            <a href="#contact" class="mil-link mil-dark mil-arrow-place mil-down-arrow">
-                                <span>ESCRÍBENOS TOMA 5 MINUTOS POR FAVOR</span>
-                            </a>
+                             <?php if ($esExito): ?>
+                                <h1 class="mil-mb-60">¡Gracias!</h1>
+                                <span>Tu mensaje ha sido enviado correctamente.</span>
+                            <?php else: ?>
+                                <h1 class="mil-mb-60">Ups…</h1>
+                                <span>Lo sentimos, hubo un problema al enviar tu mensaje. Intenta más tarde o escríbenos directamente a info@latorrerojaproducciones.com.</span>
+                            <?php endif; ?>
+                            <p>Serás redirigido en <span id="count">5</span> segundos…</p>
+
+                            <script>
+                                let count = 5;
+                                const el = document.getElementById('count');
+
+                                const interval = setInterval(function () {
+                                    count--;
+                                    el.textContent = count;
+                                    if (count <= 0) {
+                                        clearInterval(interval);
+                                        window.location.href = "./contact.html"; // ajusta URL
+                                    }
+                                }, 1000);
+                            </script>
                         </div>
                     </div>
                 </div>
-
-                <!-- contact form -->
-                <section id="contact">
-                    <div class="container mil-p-120-90">
-                        <p class="mil-center mil-text-lg">¿Tienes un proyecto en mente?</p>
-                        <!--<h1 class="mil-center mil-up mil-mb-120 mil-h3"><span class="mil-thin"></span>¡Cuéntanoslo <span class="mil-thin">y lo diseñamos </span>contigo!</h3>-->
-                        <h3 class="mil-center mil-up mil-mb-120">¡Platiquemos!<span class="mil-thin"></span></h3>
-                        <!--
-                        <form class="row align-items-center">
-                            <div class="col-lg-6 mil-up">
-                                <input type="text" placeholder="¿Cual es tu nombre?">
-                            </div>
-                            <div class="col-lg-6 mil-up">
-                                <input type="email" placeholder="Tu correo">
-                            </div>
-                            <div class="col-lg-6 mil-up">
-                                <input type="number" placeholder="Tu Whatsapp">
-                            </div>
-                            <div class="col-lg-6 mil-up">
-                                <input type="text" placeholder="¿De que país nos contactas?">
-                            </div>
-                            <div class="col-lg-6 mil-up">
-                                <input type="text" placeholder="¿Qué tipo de producto o servicio ofreces?">
-                            </div>
-                            <div class="col-lg-12 mil-up">
-                                <input type="text" placeholder="¿Qué problemas o necesidades pretendes resolver con tu proyecto o marca?">
-                            </div>
-                            <div class="col-lg-6 mil-up">
-                                <input type="text" placeholder="¿Tienes fecha límite?">
-                            </div>
-                            <div class="col-lg-6 mil-up">
-                                <input type="text" placeholder="¿Quieres comentarnos algo más?">
-                            </div>
-                            <div class="col-lg-8">
-                                <p class="mil-up mil-mb-30"><span class="mil-accent" style="color: var(--primary-color);">*</span>Prometemos no revelar tu información personal a terceros.</p>
-                            </div>
-                            <div class="col-lg-4">
-                                <div class="mil-adaptive-right mil-up mil-mb-30">
-                                    <button type="submit" class="mil-button mil-arrow-place">
-                                        <span>Enviar Mensaje</span>
-                                    </button>
-                                </div>
-                            </div>
-                        </form>-->
-                        <form class="row align-items-center" method="POST" action="contacto.php">
-                            <div class="col-lg-6 mil-up">
-                                <input type="text" name="nombre" placeholder="¿Cuál es tu nombre?" required>
-                            </div>
-                            <div class="col-lg-6 mil-up">
-                                <input type="email" name="email" placeholder="Tu correo" required>
-                            </div>
-                            <div class="col-lg-6 mil-up">
-                                <input type="tel" name="whatsapp" placeholder="Tu Whatsapp">
-                            </div>
-                            <div class="col-lg-6 mil-up">
-                                <input type="text" name="pais" placeholder="¿De qué país nos contactas?">
-                            </div>
-                            <div class="col-lg-6 mil-up">
-                                <input type="text" name="servicio"
-                                    placeholder="¿Qué tipo de producto o servicio ofreces?">
-                            </div>
-                            <div class="col-lg-12 mil-up">
-                                <input type="text" name="problema"
-                                    placeholder="¿Qué problemas o necesidades pretendes resolver con tu proyecto o marca?">
-                            </div>
-                            <div class="col-lg-6 mil-up">
-                                <input type="text" name="fecha_limite" placeholder="¿Tienes fecha límite?">
-                            </div>
-                            <div class="col-lg-6 mil-up">
-                                <input type="text" name="comentarios" placeholder="¿Quieres comentarnos algo más?">
-                            </div>
-                            <div class="col-lg-8">
-                                <p class="mil-up mil-mb-30">
-                                    <span class="mil-accent" style="color: var(--primary-color);">*</span>
-                                    Prometemos no revelar tu información personal a terceros.
-                                </p>
-                            </div>
-                            <div class="col-lg-4">
-                                <div class="mil-adaptive-right mil-up mil-mb-30">
-                                    <button type="submit" class="mil-button mil-arrow-place">
-                                        <span>Enviar Mensaje</span>
-                                    </button>
-                                </div>
-                            </div>
-                        </form>
-
-                    </div>
-                </section>
-                <!-- contact form end -->
 
                 <!-- map -->
                 <div class="mil-map-frame mil-up">
